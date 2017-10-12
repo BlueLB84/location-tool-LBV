@@ -98,6 +98,23 @@
     </select>
 </form>
 
+<!-- Firebase app deployment -->
+
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAUukqzFYlLclpFaPyn35arjGxvPK-QVSo",
+    authDomain: "soofa-js-dev-cha-1507824264062.firebaseapp.com",
+    databaseURL: "https://soofa-js-dev-cha-1507824264062.firebaseio.com",
+    projectId: "soofa-js-dev-cha-1507824264062",
+    storageBucket: "soofa-js-dev-cha-1507824264062.appspot.com",
+    messagingSenderId: "691551413798"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
 <!-- Dependancies and external javascript code -->
 
 <!-- This is for the map view (leaflet.js) -->
