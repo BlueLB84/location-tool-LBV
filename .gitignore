@@ -1,2 +1,5 @@
 .env
 .DS_Store
+firebase.json
+.firebaserc
+404.html
