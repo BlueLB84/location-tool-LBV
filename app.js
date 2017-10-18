@@ -263,7 +263,6 @@ function clone(obj) {
     throw new Error("Unable to copy obj! Its type isn't supported.");
 }
 
-
 /// Expand and show checkboxes ///
 
 var expanded = false;
@@ -341,6 +340,47 @@ for (var i = 0; i < searchBox.getPlaces().length; i++){
 
   var rect = L.rectangle([northeastcoord, southwestcoord], { dashArray: "10", color: "#4d4d4d",  opacity: .8,  fillOpacity: 0});
   map.addLayer(rect);
+
+/// Code to display location scores comparison
+
+var scoresForm = document.getElementById('scoresform');
+
+scoresForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  
+  var scoreCapture = document.getElementById('scoresform').elements;
+  var individualScores = [];
+
+  for (var i = 0; i < scoreCapture.length; i++) {
+    individualScores.push(scoreCapture[i].value);
+  }
+
+  var condensedAddress = individualScores[0].replace(`, USA`, ' ');
+
+  var displayToCompare = 
+  `
+  <ul class="scoresCompare">
+    <li style="text-align: center; font-size: 14px;">${condensedAddress}</li>
+    <li style="text-align: center; color: #ff6858;">AVERAGE SCORE: ${individualScores[1]}</li>
+    <div>
+    <li>Google Food Score: ${individualScores[2]}</li>
+    <li>Google Community Score: ${individualScores[3]}</li>
+    <li>Google Big Shops Score: ${individualScores[4]}</li>
+    <li>Google Small Shops Score: ${individualScores[5]}</li>
+    <li>Google Transit Score: ${individualScores[6]}</li>
+    <li>Google Tourist Score: ${individualScores[7]}</li>
+    <li>Yelp Food Score: ${individualScores[8]}</li>
+    <li>Yelp Shopping Score: ${individualScores[9]}</li>
+    <li>Yelp Community Score: ${individualScores[10]}</li>
+    <li>Walking Score: ${individualScores[11]}</li>
+    </div>
+    </ul>
+  `;
+  document.getElementById('compareScores').insertAdjacentHTML('beforeend', displayToCompare);
+
+  return false;
+});
+
 
 
 
