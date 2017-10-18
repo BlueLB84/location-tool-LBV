@@ -1,0 +1,272 @@
+body { 
+	font-family: "Roboto", sans-serif; 
+	background-color: #f7f5f5;
+	height: 100%;
+	box-sizing: border-box;
+	padding-bottom: 100px;
+}
+
+/* not sure what this is styling */
+h1 { 
+	position: absolute;
+	background: white;
+	padding: 5px;
+}
+
+/* page title */
+h2 {
+	text-align: center;
+	font-size: 3.15em;
+	padding-bottom: 30px;
+}
+
+#soofa-logo {
+	position: relative;
+	top: 4px;
+	margin-right: 10px;
+	width: 175px;
+}
+
+/* Css for warning box */
+.danger {
+    position: relative;
+    bottom: 30px;
+    color: #ff6858;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.danger p:last-child {
+	font-size: 14px;
+	color: #717171;
+}
+
+.map-search-container {
+	text-align: center;
+}
+
+/* Google Searchbox */
+#mapsearch {
+	display: inline-block;
+	width: 400px;
+	height: 20px;
+	margin-left: 60px;
+	border-style: none;
+	background-color: transparent;
+	border-bottom: 1px solid #515151;
+	z-index: 1;
+}
+
+/* Dropdown menu for cities */
+.city-dropdown {
+	display: inline-block;
+	width: 200px;
+}
+
+/* Css for checkboxes */  
+/* Dropdown menu for multiple heatmap layers */
+#layerselector {
+	display: inline-block;
+	margin-left: 20px;
+	width: 300px;
+}
+
+.multiselect {
+  width: 300px;
+  position: relative;
+}
+
+.checkboxes-container {
+	background-color: black;
+}
+
+#checkboxes {
+  display: none;
+  position: absolute;
+  top: 85px;
+  left: 50px;
+  border: 1px #dadada solid;
+  font-weight:100;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: white;
+  z-index: 2;
+}
+
+select {
+  margin: 50px;
+  width: 180px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #515151;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://www.soofa.co/favicon.ico) 98% / 24px no-repeat #eee;
+}
+
+select::-ms-expand { 
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+#checkboxes > label:first-child {
+	padding-top: 20px;
+}
+
+.selectBox select {
+  width: 200px;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+#checkboxes input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#checkboxes label {
+  display: block;
+  padding-top: 10px;
+}
+
+#checkboxes label:first-child {
+	margin-top: 0;
+}
+#checkboxes label:last-child {
+	margin-bottom: 10px;
+}
+
+/** Important for leaflet map **/  
+.leaflet-container {                                            
+      background: rgba(0,0,0,.8) !important;
+    } 
+
+/* MAP */
+.map-container {
+	width: 50%;
+}
+
+div.heatmap {
+	display: block;
+	position: absolute;
+	margin-left: 50px;
+	height: 500px;
+	width: 700px;
+	z-index: 1;
+	border: 2px solid white;
+}
+
+
+/* Css for 'averge score' button */
+.scoredisplay {
+    background-color: #ff6858;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: .075em;
+}
+
+#save-info-button {
+	display: block;
+	margin-top: 20px;
+}
+
+input::placeholder {
+    outline: none;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 14px;
+}
+
+#mapsearch textarea:focus, input:focus{
+    outline: none;
+    color: #ff6858;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 14px;
+}
+
+/* score displays */
+.scoresform-container {
+	width: 50%;
+	height: 500px;
+	float: right;
+	padding: 10px 0px;
+	margin-top: 20px;
+}
+
+#scoresform {
+	position: relative;
+	display: block;
+	width: 400px;
+	background: rgba(0,0,0,.15);
+	padding: 30px 40px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#scoresform > label {
+	display: inline-block;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+#scoresform > input {
+	position: absolute;
+	right: 220px;
+	width: 30px;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 5px;
+	margin-left: 8px;
+	padding-left: 5px;
+}
+
+label[for="address"] {
+	margin-bottom: 8px;
+}
+
+#scoresform #address {
+	right: 100px;
+	width: 300px;
+	margin-top: 8px;
+	padding-top: 3px;
+	border: none;
+	background-color: transparent;
+}
+
+label[for="average"] {
+    color: #ff6858;
+    margin-right: 5px;
+    letter-spacing: .075em;
+}
+
+#average {
+	width: 50px;
+	font-size: 16px;
+	padding-left: 5px;
+	border: none;
+	background-color: transparent;
+	color: #ff6858;
+}
+
+
+
+
+
+
+
+
+
