@@ -122,54 +122,58 @@
 
 <!-- MAP -->
 <div class="map-container">
-<div class="heatmap" id="map" ></div>
+<div class="heatmap" id="map"></div>
 </div>
 
 <!-- Set up score displays -->
 
 <div class="scoresform-container">
-<form id="scoresform" action="mailto:" method="post" enctype="text/plain">
+<form id="scoresform" action="#compareScores" method="POST" enctype="text/plain">
+  <div class="address-container">
+    <label for="address"></label>
+    <input id="address" type="text" name="Address" readonly/>
+  </div>
+    <br>
     <div class="average">
     <label for="average">AVERAGE SCORE:</label>
     <input id="average" type="text" name="Average" readonly/>
     </div>
-    <label for="address">Address:</label>
-    <input id="address" type="text" name="Address" readonly/>
-    <br>
-    <label for="googlefood">Google Food Score:</label>
-    <input id="googlefood" type="text" name="Google-Food" readonly />
-    <br>
-    <label for="googlecommunity">Google Community Score:</label>
-    <input id="googlecommunity" type="text" name="Google-Community" readonly/>
-    <br>
-    <label for="googlebigshops">Google Big Shops Score:</label>
-    <input id="googlebigshops" type="text" name="Google-Big-Shops" readonly/>
-    <br>
-    <label for="googlesmallshops">Google Small Shops Score:</label>
-    <input id="googlesmallshops" type="text" name="Google-Small-Shops" readonly/>
-    <br>
-    <label for="googletransit">Google Transit Score:</label>
-    <input id="googletransit" type="text" name="Google-Transit" readonly/>
-    <br>
-    <label for="googletransit">Google Tourist Score:</label>
-    <input id="googletourist" type="text" name="Google-Tourist" readonly/>
-    <br>
-    <label for="yelpfood">Yelp Food Score:</label>
-    <input id="yelpfood" type="text" name="Yelp-Food" readonly/>
-    <br>
-    <label for="yelpshopping">Yelp Shopping Score:</label>
-    <input id="yelpshopping" type="text" name="Yelp-Shopping" readonly/>
-    <br>
-    <label for="yelpcommunity">Yelp Community Score:</label>
-    <input id="yelpcommunity" type="text" name="Yelp-Community" readonly/>
-    <br>
-    <label for="walkscore">Walking Score:</label>
-    <input id="walkscore" type="text" name="Walkscore" readonly/>
-
-    <button type="submit" class="scoredisplay" id="save-info-button">EMAIL LOCATION INFORMATION</button>
+    <div class="scores">
+      <label for="googlefood">Google Food Score:</label>
+      <input id="googlefood" type="text" name="Google-Food" readonly />
+      <br>
+      <label for="googlecommunity">Google Community Score:</label>
+      <input id="googlecommunity" type="text" name="Google-Community" readonly/>
+      <br>
+      <label for="googlebigshops">Google Big Shops Score:</label>
+      <input id="googlebigshops" type="text" name="Google-Big-Shops" readonly/>
+      <br>
+      <label for="googlesmallshops">Google Small Shops Score:</label>
+      <input id="googlesmallshops" type="text" name="Google-Small-Shops" readonly/>
+      <br>
+      <label for="googletransit">Google Transit Score:</label>
+      <input id="googletransit" type="text" name="Google-Transit" readonly/>
+      <br>
+      <label for="googletourist">Google Tourist Score:</label>
+      <input id="googletourist" type="text" name="Google-Tourist" readonly/>
+      <br>
+      <label for="yelpfood">Yelp Food Score:</label>
+      <input id="yelpfood" type="text" name="Yelp-Food" readonly/>
+      <br>
+      <label for="yelpshopping">Yelp Shopping Score:</label>
+      <input id="yelpshopping" type="text" name="Yelp-Shopping" readonly/>
+      <br>
+      <label for="yelpcommunity">Yelp Community Score:</label>
+      <input id="yelpcommunity" type="text" name="Yelp-Community" readonly/>
+      <br>
+      <label for="walkscore">Walking Score:</label>
+      <input id="walkscore" type="text" name="Walkscore" readonly/>
+    </div>
+    <button type="submit" class="scoredisplay" id="save-info-button">COMPARE LOCATION INFORMATION</button>
 </form>
 </div>
 
+<div id="compareScores"></div>
 
 
 <!-- Set up Google Maps Javascript API -->
