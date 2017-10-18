@@ -100,10 +100,6 @@ h2 {
   position: relative;
 }
 
-.checkboxes-container {
-	background-color: black;
-}
-
 #checkboxes {
   display: none;
   position: absolute;
@@ -111,6 +107,7 @@ h2 {
   left: 50px;
   border: 1px #dadada solid;
   font-weight:100;
+  text-align: left;
   padding-right: 5px;
   padding-left: 5px;
   background-color: white;
@@ -202,9 +199,11 @@ div.heatmap {
     letter-spacing: .075em;
 }
 
+/*  Compare scores submit button */
 #save-info-button {
 	display: block;
-	margin-top: 20px;
+	margin: 20px auto 0px auto;
+
 }
 
 input::placeholder {
@@ -222,60 +221,66 @@ input::placeholder {
 
 /* score displays */
 .scoresform-container {
-	width: 50%;
+	width: 500px;
 	height: 500px;
 	float: right;
 	padding: 10px 0px;
 	margin-top: 20px;
+	margin-bottom: 50px;
 }
 
 #scoresform {
 	position: relative;
 	display: block;
-	width: 400px;
+	width: 350px;
 	background: rgba(0,0,0,.15);
 	padding: 30px 40px;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-#scoresform > label {
+.scores {
+	position: relative;
+	width: 225px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+}
+
+#scoresform .scores > label {
 	display: inline-block;
 	margin-top: 10px;
-	margin-left: 80px;
 	font-size: 14px;
 }
 
-#scoresform > input {
+#scoresform .scores > input {
 	position: absolute;
-	right: 135px;
+	right: 0;
 	width: 30px;
 	text-align: center;
 	font-size: 12px;
-	margin-top: 5px;
-	margin-left: 8px;
-	padding-left: 5px;
+	margin-top: 7px;
 }
 
-#scoresform label[for="address"] {
-	margin-bottom: 8px;
-	margin-left: 25px;
+.address-container {
+	width: 370px;
+	margin: 0px auto;
 }
 
 #scoresform #address {
-	right: 70px;
-	width: 300px;
-	margin-top: 8px;
-	padding-top: 3px;
+	width: 100%;
+	font-size: 14px;
 	border: none;
 	background-color: transparent;
+	text-align: center;
 }
+
+/* AVERAGE score */
 
 label[for="average"] {
     color: #ff6858;
-    margin-right: 5px;
-    margin-left: 80px; 
     letter-spacing: .075em;
+    padding-left: 20px;
 }
 
 #average {
@@ -285,7 +290,49 @@ label[for="average"] {
 	border: none;
 	background-color: transparent;
 	color: #ff6858;
+	text-align: center;
 }
+
+.average {
+	width: 225px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/***  Score comparison section at bottom  ***/
+
+/* comparison results container */
+#compareScores {
+	clear: both;
+	width: 1200px;
+	border-top: 2px solid white;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+}
+
+/* individual comparison results */
+.scoresCompare {
+	background: rgba(0,0,0,.15);
+	border: 2px solid white;
+	border-radius: 4px;
+	list-style-type: none;
+	width: 350px;
+	float: left;
+	padding: 10px;
+	margin-right: 10px;
+}
+
+.scoresCompare div {
+	width: 230px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.scoresCompare li {
+	margin-top: 8px;
+}
+
+
 
 
 
