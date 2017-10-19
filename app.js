@@ -341,18 +341,17 @@ for (var i = 0; i < searchBox.getPlaces().length; i++){
   var rect = L.rectangle([northeastcoord, southwestcoord], { dashArray: "10", color: "#4d4d4d",  opacity: .8,  fillOpacity: 0});
   map.addLayer(rect);
 
-/// Code to display location scores comparison
+/// Code to display location scores comparison ///
 
 var scoresForm = document.getElementById('scoresform');
 
 scoresForm.addEventListener('submit', function (event) {
   event.preventDefault();
   
-  var scoreCapture = document.getElementById('scoresform').elements;
   var individualScores = [];
 
-  for (var i = 0; i < scoreCapture.length; i++) {
-    individualScores.push(scoreCapture[i].value);
+  for (var i = 0; i < scoresForm.elements.length; i++) {
+    individualScores.push(scoresForm.elements[i].value);
   }
 
   var condensedAddress = individualScores[0].replace(`, USA`, ' ');
@@ -376,6 +375,7 @@ scoresForm.addEventListener('submit', function (event) {
     </div>
     </ul>
   `;
+
   document.getElementById('compareScores').insertAdjacentHTML('beforeend', displayToCompare);
 
   return false;
